@@ -10,11 +10,14 @@ var client = new Client(
     apiKey: apiKey,
     httpOptions: new HttpOptions
     {
-        BaseUrl = "https://ai-proxy.lab.epam.com/google",
-        Headers = new Dictionary<string, string>
-        {
-            { "Authorization", $"Bearer {apiKey}" }
-        }
+        BaseUrl = "https://ai-proxy.lab.epam.com"//"https://ai-proxy.lab.epam.com/google",
+
+
+        // Attempt 2: the below configuration fails with 'Bad Authorization header'
+        //Headers = new Dictionary<string, string>
+        //{
+        //    { "Authorization", $"Bearer {apiKey}" }
+        //}
     });
 
 Schema countryInfo = new()
